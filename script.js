@@ -101,14 +101,13 @@ let numberVals = [ 5, 67, 34, 456, 78 ];
 let letterVals = [ "v", "x", "r", "f", "p" ];
 
 function interleave(){
-    let vals = [];{
-      i = 0;
-      letterVals[ i ]+ numberVals[ i ];
-    }
+    let vals = [];
+      for(i = 0; i < numberVals.length; i++){
+        vals.push(letterVals[i] + numberVals[i]);
+      }
     // Your answer here:
     return vals;
 }
-
 
 /*
 8. Iterate over the "first" and "second" arrays. Compare the values for both arrays. If the arrays values are the same, then store that value in the "same" array. Return "same".
@@ -120,5 +119,10 @@ let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close"
 function union(){
     let same = [];
     // Your answer here:
-    
+    for (i = 0; i < first.length; i++){
+      if (first[i] === second[i]){
+      same.push(first[i]);
+    }
+  }
+    return same;
 }
